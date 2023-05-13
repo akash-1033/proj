@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width">
+    <title>Document</title>
+    <script>
+        function getPics() {} //just for this demo
+        const imgs = document.querySelectorAll('.gallery');
+        const fullPage = document.querySelector('#fullpage');
+        
+        imgs.forEach(img => {
+          img.addEventListener('click', function() {
+            fullPage.style.backgroundImage = 'url(' + img.src + ')';
+            fullPage.style.display = 'block';
+          });
+        });
+
+        $('img[eng]').addClass('eng').click(function(){
+    var src = $(this).attr('src');
+    $('<div>').css({
+        background: 'RGBA(0,0,0,.5) url('+src+') no-repeat center',
+        backgroundSize: 'contain',
+        width:'100%', height:'100%',
+        position:'fixed',
+        zIndex:'10000',
+        top:'0', left:'0',
+        cursor: 'zoom-out'
+    }).click(function(){
+        $(this).remove();
+    }).appendTo('body');
+});
+        </script>
+</head>
+<body>
+    
+</body>
+</html>
+<style>
+    *{
+        margin: 9px 9px;
+    }
+
+   /* Add a black background color to the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #e9e9e9;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: right;
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Style the "active" element to highlight the current page */
+.topnav a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.topnav input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 20px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 600px) {
+  .topnav a, .topnav input[type=text] {
+    float: none;
+    display: block;
+    text-align: left;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+  }
+  .topnav input[type=text] {
+    border: 1px solid #ccc;
+    
+  }
+}
+
+
+#fullpage {
+  display: none;
+  position: absolute;
+  z-index: 9999;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-size: contain;
+  background-repeat: no-repeat no-repeat;
+  background-position: center center;
+  background-color: black;
+}
+
+
+.headline{
+    height: 100px;
+    width: 100%;
+    font-size: 25px;
+}
+.image{
+    height: 500px;
+    width: 100%;
+    border: 2px white;
+    border-radius: 8px;
+    
+}
+.image ul {
+    align-content: baseline;
+    
+}
+
+.container{
+    display: flex;
+}
+.data{
+    overflow: auto;
+    height: 400px;
+    width: 800px;
+    font-size: large;
+    /* border: 2px solid black;
+    border-radius: 8px; */
+}
+/* .gallary{
+    height: 400px;
+    width: 660px;
+    border: 2px solid black;
+    border-radius: 8px;
+} */
+.photo1{
+    height: 400px;
+    width: 60%;
+    /* border: 2px solid black;
+    border-radius: 8px; */
+    float: right; 
+}
+/* .short{
+    position: absolute;
+    top: 1500px;
+    height: 400px;
+    width: 26%;
+    border: 2px solid black;
+    border-radius: 8px;
+
+} */
+.bg{
+    bottom: 0px;
+    height: 50px;
+    width: 100%;
+}
+
+.short1{
+    position: absolute;
+    /* top: 1500px; */
+    /* left: 420px; */
+    height: 500px;
+    width: 36%;
+    border: 2px solid black;
+    border-radius: 8px;
+
+}
+</style>
+<body>
+    <nav>
+        <div class="topnav">
+            <a href="about">About</a>
+            <a href="contact">Contact</a>
+            <a class="active" href="home">Home</a>
+            
+            <!-- <a href="search icon"><img src="https://static.vecteezy.com/system/resources/previews/009/341/166/original/search-icon-sign-symbol-design-free-png.png" height="20px" width="20px" alt="search icon"></a>
+            <input type="text" placeholder="Search.."> -->
+          </div>
+    </nav>
+    <div class="address">
+        <br>
+       <h3>Home/Destinations/Bhagalpur/Ruins of Nalanda</h3> 
+    </div>
+    <br>
+    <div class="headline">
+        <h1>Ruins Of Nalanda</h1>
+    </div>
+    <div class="image">
+        <img src="\Nalanda Ruins\111.jpeg" height="600px" width="97%" >
+    </div>
+    <br><br><br><br><br><br>
+    <div class="container"> 
+    <div class="data">
+        <p>It is hard to not be overwhelmed by the grandeur of the ruins of Nalanda, the first international residential university in the world. Currently spread over an area of 14 hectares, the red-bricked monasteries and temples are said to once have housed 10,000 students and 2,000 teachers. Besides, past excavations suggest that a large part of the university is yet to be excavated.
+                <br><br>
+            Although its history goes back to the times of the Buddha, the university at Nalanda was founded in the 5th century CE, and it flourished for the next 700 years. Its decline began in the late Pala period (750-1161 CE), but the final blow was the invasion by Bakhtiyar Khilji around 1200 CE.
+            <br><br>
+            The subjects that were taught at Nalanda included Buddhist scriptures (of both the Mahayana and Hinayana schools), philosophy, theology, metaphysics, logic, grammar, astronomy and medicine. The university received royal patronage from Harshvardhana, the emperor of Kanauj as well as several Pala kings. Many visitors from abroad visited and studied at the university, including the Chinese travellers Hiuen Tsang and I Tsing, who have written detailed accounts about the university.
+            <br><br>
+            At its base may have been the famous library of Nalanda, though a Tibetan source speaks of a library with nine storeys, which seems implausible for the building technology of the day. In any case, the library’s location remains uncertain. It held the sorts of manuscripts that the Chinese pilgrims came in search of (at least eight finely illustrated palm-leaf manuscripts created at Nalanda during the Pala period still survive).
+            <br><br>
+            Nalanda was a place for advanced learning, not basic education. Some of its teachers both taught and composed path-breaking treatises and commentaries. A Nalanda education held serious cachet in the scholastic community, and it took in the best and the brightest. Or as Xuanzang puts it, they were “men of the highest ability and talent...there are many hundreds whose fame has rapidly spread through distant regions”.
+            <br><br>
+            Much of the knowledge we have about Nalanda comes from the pilgrim monks’ writings on the wall. Nalanda University used to be an epitome of knowledge and was one of the best schools at its time. At its peak, it was attracting students and scholars not only from India but also from Central Asia, Korea, China, and Tibet. All the students here compulsorily studied 18 sects of Buddhism and Mahayana. Their courses also included subjects like Samkhya, Sanskrit grammar, logic, and medicine. 
+            <br><br>
+            It is believed that Nalanda was destroyed and ransacked around 1200 CE by the army of the Mamluk Dynasty of the Delhi Sultanate, following the rules of Bakhtiyar Khalji.</p>
+    </div>
+    <div class="gallary">
+        <img eng src="\Nalanda Ruins\1.jpeg" alt="img" height="250px" width="450px">
+        <ul>
+            <li>Distance From Bhagalpur: 200 Kms</li>
+            <li>Via NH33</li>
+        </ul>
+        <div id="fullpage" onclick="this.style.display='none';"></div>
+    </div>
+        </div>
+        
+        <div class="photo1">
+            <div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=600&amp;height=500&amp;hl=en&amp;q=ruins of nalanda&amp;t=h&amp;z=11&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://capcuttemplate.org/">Capcuttemplate.org</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:500px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:500px;}.gmap_iframe {height:500px!important;}</style></div>
+        </div>
+
+       <div class="short1">
+        <img src="\Nalanda Ruins\00.png" alt="imgg" height="490px" width="97%">
+       </div>
+       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+       <br><br><br><br><br>
+</body>
+</html>
